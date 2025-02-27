@@ -182,8 +182,9 @@ img {
 /* Responsive Design */
 @media (max-width: 991px) {
   .contenedor {
-    grid-template-columns: 2fr;
+    grid-template-columns: repeat(2, 0.5fr);
     justify-items: center;
+    width: 100%;
   }
 
   .botones .dd {
@@ -198,8 +199,9 @@ img {
 }
 @media (max-width: 600px) {
   .contenedor {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 0.5fr);
     justify-items: center;
+    width: 100%;
   }
 
   .botones .dd {
