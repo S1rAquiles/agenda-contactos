@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contactos</title>
+  <link rel='stylesheet' href='/stylesheets/contactos.css' />
+</head>
+<body>
+  <h1>Contactos <%= modelo.length %></h1>
+  <script src="./script.js"></script>
+
+  <div class="botones" style="display: flex; justify-content: center; gap: 10px;">
+    <a href="/add" class="dd">
+      <i></i>
+      <i></i>
+      <span>Añadir</span>
+    </a>
+
+    <a href="/" class="dd">
+      <i></i>
+      <i></i>
+      <span>Volver</span>
+    </a>
+  </div>
+
+  <div class="contenedor">
+    <% for (const agenda of modelo) { %>
+      <div class="contacto">
+        <img src="<%= agenda.img %>" alt="Imagen de <%= agenda.nombre %>">
+        <div class="contenido">
+          <p>ID: <span><%= agenda.id %></span></p>
+          <p>Nombre: <%= agenda.nombre %></p>
+          <p>Descripción: <%= agenda.descripcion %></p>
+          <p>Teléfono: <%= agenda.numero %></p>
+          <div class="acciones">
+            <a href="/update/<%= agenda.id %>" class="btn">Actualizar</a>
+            <a href="/delete/<%= agenda.id %>" class="btn">Eliminar</a>
+          </div>
+        </div>
+      </div>
+    <% } %>
+  </div>
+</body>
+</html>

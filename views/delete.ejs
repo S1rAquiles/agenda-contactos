@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/alphardex/aqua.css@master/dist/aqua.min.css"
+/>
+  <link rel='stylesheet' href='/stylesheets/delete.css' />
+  <title>Eliminar Contacto</title>
+</head>
+<body>
+  <form class="login-form" action="/delete/<%=modelo.id%>" method="post">
+    <h1>Eliminar Contacto</h1>
+    <div class="form-input-material">
+      <input type="text" name="nombre" value="<%= modelo.nombre %>" autocomplete="off" class="form-control-material" disabled/>
+      <label for="nombre">Nombre</label>
+    </div>
+    <div class="form-input-material">
+      <input type="text" name="img" value="<%= modelo.img %>" autocomplete="off" class="form-control-material" disabled/>
+      <label for="img">Imagen (link)</label>
+    </div>
+    <div class="form-input-material">
+      <input type="number" name="numero" value="<%= modelo.numero %>" autocomplete="off" class="form-control-material" disabled/>
+      <label for="numero">Número</label>
+    </div>
+    <div class="form-input-material">
+      <input type="text" name="descripcion" value="<%= modelo.descripcion %>" autocomplete="off" class="form-control-material" disabled/>
+      <label for="descripcion">Descripción</label>
+    </div>
+    <button type="submit" class="btn">Eliminar</button>
+    <a href="/agenda" class="btx">Cancelar</a>
+  </form>
+</body>
+</html>
+
+
+
+

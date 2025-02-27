@@ -1,0 +1,107 @@
+body {
+  background-image: url('/images/fondo.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.btn, .btx {
+  padding: 8px 20px;
+  border-radius: 0;
+  overflow: hidden;
+  background-color: var(--tecer-color); /* Añadido para que no sea transparente */
+  color: #fff; /* Color del texto */
+  position: relative;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn::before, .btx::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    var(--cuarto-color),
+    transparent
+  );
+  transform: translateX(-100%);
+  transition: 0.6s;
+}
+
+.btn:hover, .btx:hover {
+  background-color: var(--cuarto-color); /* Añadido para que no sea transparente */
+  box-shadow: 0 0 20px 10px rgba(204, 240, 0, 0.384);
+}
+.btn:hover::before, .btx:hover::before {
+  transform: translateX(100%);
+}
+
+.form-input-material {
+  --input-default-border-color: rgb(0, 0, 0);
+  --input-border-bottom-color: rgb(0, 0, 0);
+}
+.form-input-material input {
+  color: rgb(0, 0, 0);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 70px;
+  color: rgb(0, 0, 0);
+  background: linear-gradient(to bottom, #7fb2d4, #1e3bbb); 
+  border-radius: 10px;
+}
+.login-form h1 {
+  margin: 0 0 24px 0;
+}
+.login-form .form-input-material {
+  margin: 12px 0;
+}
+.login-form .btn {
+  width: 100%;
+  margin: 18px 0 9px 0;
+  background-color: var(--secondary-color);
+  color: #fff;
+  border-radius: 10px;
+}
+
+.login-form .btx {
+  display: inline-block;
+  margin: 18px 0 9px 0;
+  background-color: var(--secondary-color);
+  color: #fff;
+  border-radius: 10px;
+  width: auto;
+}
+
+/* Cambio de color primario  */
+:root {
+  --primary-color: #2ef14f; /* hoja */
+  --secondary-color: #1f3241;
+  --tecer-color: #f1f121;
+  --cuarto-color: #eef121;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-form {
+    padding: 30px 40px;
+  }
+  .login-form h1 {
+    font-size: 1.5em;
+  }
+  .btn {
+    padding: 6px 15px;
+  }
+}

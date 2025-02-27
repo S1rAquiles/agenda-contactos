@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Registro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/alphardex/aqua.css@master/dist/aqua.min.css"
+    />
+    <link rel='stylesheet' href='/stylesheets/add.css' />
+  </head>
+  <body>
+    <form class="login-form" action="/addPost" method="post">
+      
+      <h1>Registro</h1>
+      <div class="form-input-material">
+        <input type="text" placeholder="" name="nombre" autocomplete="off" class="form-control-material"/>
+        <label for="nombre">Nombre</label>
+      </div>
+      <div class="form-input-material">
+        <input type="text" name="img" placeholder="" autocomplete="off" class="form-control-material"/>
+        <label for="img">Imagen (link)</label>
+      </div>
+      <div class="form-input-material">
+        <input type="number" name="numero" placeholder="" autocomplete="off" class="form-control-material"/>
+        <label for="numero">Número</label>
+      </div>
+      <div class="form-input-material">
+        <input type="text" name="descripcion" placeholder="" autocomplete="off" class="form-control-material"/>
+        <label for="descripcion">Descripción</label>
+      </div>
+      <button type="submit" class="btn  ">Registrar</button>
+      <a href="/agenda" class="btx ">Volver</a>
+
+      
+      
+    </form>
+  </body>
+</html>
