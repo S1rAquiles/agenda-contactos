@@ -28,10 +28,11 @@
       <div class="contacto">
         <img src="<%= agenda.img %>" alt="Imagen de <%= agenda.nombre %>">
         <div class="contenido">
-          <p>ID: <span><%= agenda.id %></span></p>
           <p>Nombre: <%= agenda.nombre %></p>
-          <p>Descripción: <%= agenda.descripcion %></p>
+          <br>
           <p>Teléfono: <%= agenda.numero %></p>
+          <p>Descripción: <%= agenda.descripcion %></p>
+          
           <div class="acciones">
             <a href="/update/<%= agenda.id %>" class="btn">Actualizar</a>
             <a href="/delete/<%= agenda.id %>" class="btn">Eliminar</a>
