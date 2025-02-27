@@ -180,7 +180,23 @@ img {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 991px) {
+  .contenedor {
+    grid-template-columns: 2fr;
+    justify-items: center;
+  }
+
+  .botones .dd {
+    margin-bottom: 10px;
+  }
+  .botones {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 600px) {
   .contenedor {
     grid-template-columns: 1fr;
     justify-items: center;
