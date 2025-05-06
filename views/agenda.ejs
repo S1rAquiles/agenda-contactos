@@ -27,13 +27,13 @@
     <% for (const agenda of modelo) { %>
       <div class="contacto">
         <img src="<%= agenda.img %>" alt="Imagen de <%= agenda.nombre %>">
-        <div class="contenido">
+        <div class="contenido" style="display: flex; flex-direction: column; height: 100%;">
           <p>Nombre: <%= agenda.nombre %></p>
           <br>
           <p>Teléfono: <%= agenda.numero %></p>
           <p>Descripción: <%= agenda.descripcion %></p>
           
-          <div class="acciones">
+          <div class="acciones" style="margin-top: auto;">
             <a href="/update/<%= agenda.id %>" class="btn">Actualizar</a>
             <a href="/delete/<%= agenda.id %>" class="btn">Eliminar</a>
           </div>
